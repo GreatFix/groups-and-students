@@ -3,6 +3,7 @@ import classes from './App.module.css'
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 import Groups from './pages/Groups/Groups'
 import Students from './pages/Students/Students'
+import Home from './pages/Home/Home'
 
 function App() {
   return (

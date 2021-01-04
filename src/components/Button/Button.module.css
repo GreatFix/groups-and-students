@@ -1,0 +1,13 @@
+.Button {
+  background-color: #70ce9b;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 5px;
+  outline: none;
+  font-family: 'Lora', serif;
+}
+.Button:hover {
+  box-shadow: 0px -0.25px 1px 1px#000;
+}

@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 .Label {
+  display: grid;
+  justify-content: center;
+  align-content: center;
   background-color: #41f0b0;
-  text-align: center;
   border-radius: 2px;
   font-size: 1em;
   font-family: 'Roboto Condensed', sans-serif;
   padding: 5px;
   margin: 2px;
-}
-.Label:hover {
-  background-color: #54d850;
 }

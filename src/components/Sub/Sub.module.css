@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 .Sub {
+  display: grid;
+  justify-content: center;
+  align-content: center;
   background-color: #54d8a8;
-  text-align: center;
   border-radius: 2px;
   font-size: 1em;
   font-family: 'Roboto Slab', serif;
   padding: 5px;
   margin: 2px;
-}
-.Sub:hover {
-  background-color: #54d850;
 }

@@ -1,0 +1,19 @@
+.Cell {
+  list-style: none;
+  display: flex;
+  font-size: 1em;
+}
+.Label {
+  flex-grow: 3;
+  text-align: center;
+}
+.Sub {
+  flex-grow: 1;
+  text-align: center;
+}
+.Edit {
+  flex-grow: 1;
+}
+.Delete {
+  flex-grow: 1;
+}

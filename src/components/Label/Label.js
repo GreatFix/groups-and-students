@@ -2,9 +2,7 @@ import React from 'react'
 import classes from './Label.module.css'
 
 const Label = (props) => {
-    return(
-
-    )
+  return <p className={classes.Label}>{props.children}</p>
 }
 
 export default Label

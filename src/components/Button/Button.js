@@ -19,7 +19,7 @@ const Button = (props) => {
   return (
     <button
       disabled={props.disabled}
-      className={classes.Button}
+      className={`${classes.Button} ${props.className}`}
       onClick={props.onClick}
       style={{ backgroundColor: color }}
     >

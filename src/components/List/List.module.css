@@ -6,3 +6,15 @@
 .List ul {
   overflow-y: auto;
 }
+.Add {
+  display: flex;
+}
+.Add button {
+  flex-grow: 1;
+}
+.Alt {
+  font-size: 1.2em;
+  text-align: center;
+  margin: 2px;
+  padding: 5px;
+}

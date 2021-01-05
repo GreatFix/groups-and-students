@@ -1,0 +1,28 @@
+.Spinner {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  width: 10vh;
+  height: 10vh;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: #1e7a6d;
+  border-radius: 50%;
+  background: linear-gradient(0deg, #025c2f, #0cd34e);
+  animation: spin infinite 10s linear;
+}
+.Spinner div {
+  width: 7.5vh;
+  height: 7.5vh;
+  border-radius: 50%;
+  background: #00994f;
+}
+@keyframes spin {
+  from {
+    transform: translate(-5vh, -5vh) rotate(0deg);
+  }
+  to {
+    transform: translate(-5vh, -5vh) rotate(360deg);
+  }
+}

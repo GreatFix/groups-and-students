@@ -13,7 +13,7 @@ const Input = (props) => {
         placeholder={props.placeholder}
         disabled={props.disabled}
         required={props.required}
-        spellcheck={'false'}
+        spellCheck={'false'}
       ></input>
     </div>
   )

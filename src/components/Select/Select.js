@@ -10,7 +10,7 @@ const Select = (props) => {
         onChange={props.onChange}
         disabled={props.disabled}
         required={props.required}
-        spellcheck={'false'}
+        spellCheck={'false'}
       >
         {props.options &&
           props.options.map((item) => {

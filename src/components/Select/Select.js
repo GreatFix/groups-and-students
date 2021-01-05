@@ -15,7 +15,7 @@ const Select = (props) => {
         {props.options &&
           props.options.map((item) => {
             return (
-              <option key={item} value={item}>
+              <option key={`${item}-${Math.random()}`} value={item}>
                 {item}
               </option>
             )

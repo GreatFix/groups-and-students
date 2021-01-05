@@ -10,14 +10,19 @@ const Button = (props) => {
     case 'info':
       color = '#00BABA'
       break
-    case 'succes':
+    case 'success':
       color = '#40C81E'
       break
+    case 'transparent':
+      color = '#00000000'
+      break
+
     default:
       color = '#0048BA'
   }
   return (
     <button
+      type={props.type}
       disabled={props.disabled}
       className={`${classes.Button} ${props.className}`}
       onClick={props.onClick}

@@ -1,6 +1,8 @@
 .Input {
   display: flex;
   flex-direction: column;
+  padding: 5px;
+  margin: 2px;
 }
 .Input input {
   outline: none;

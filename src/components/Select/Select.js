@@ -14,7 +14,11 @@ const Select = (props) => {
       >
         {props.options &&
           props.options.map((item) => {
-            return <option value={item}>{item}</option>
+            return (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            )
           })}
       </select>
     </div>

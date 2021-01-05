@@ -2,9 +2,7 @@ import React from 'react'
 import classes from './Header.module.css'
 
 const Header = (props) => {
-    return(
-
-    )
+  return <div className={`${classes.Header} ${props.className}`}>{props.children}</div>
 }
 
 export default Header

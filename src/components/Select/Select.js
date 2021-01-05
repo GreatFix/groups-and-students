@@ -11,6 +11,7 @@ const Select = (props) => {
         disabled={props.disabled}
         required={props.required}
         spellCheck={'false'}
+        defaultValue={props.defaultValue}
       >
         {props.options &&
           props.options.map((item) => {

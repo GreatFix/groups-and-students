@@ -31,12 +31,13 @@ const List = (props) => {
           return (
             <Cell
               key={Math.random()}
-              subContent={item.group}
+              subContent={item[props.subProperty]}
+              id={item[props.idProperty]}
               onClickLabel={props.onClickLabel}
               onClickEdit={props.onClickEdit}
               onClickDelete={props.onClickDelete}
             >
-              {item.name}
+              {item[props.mainProperty]}
             </Cell>
           )
         })}

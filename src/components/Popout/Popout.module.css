@@ -1,0 +1,15 @@
+.Popout {
+  width: 50vw;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1e7a6d;
+  padding: 16px;
+  border-radius: 5px;
+}
+.Close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

@@ -4,7 +4,12 @@ import classes from './Input.module.css'
 const Input = (props) => {
   return (
     <div className={`${classes.Input} ${props.className}`}>
-      {props.label && <p>{props.label}</p>}
+      {props.label && (
+        <p>
+          {props.label}
+          {props.required && <em>*</em>}
+        </p>
+      )}
       <input
         name={props.name}
         value={props.value}

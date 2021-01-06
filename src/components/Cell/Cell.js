@@ -7,14 +7,18 @@ import Sub from '../Sub/Sub'
 const Cell = (props) => {
   return (
     <li className={`${classes.Cell} ${props.className}`}>
-      <Label
-        className={classes.Label}
-        onClick={() => {
-          props.onClickLabel(props.id)
-        }}
-      >
-        {props.children}
-      </Label>
+      {props.onClickLabel ? (
+        <Label
+          className={classes.Label}
+          onClick={() => {
+            props.onClickLabel(props.id)
+          }}
+        >
+          {props.children}
+        </Label>
+      ) : (
+        <Label className={classes.Label}>{props.children}</Label>
+      )}
       {props.subContent && <Sub className={classes.Sub}>{props.subContent}</Sub>}
 
       {props.onClickEdit && (

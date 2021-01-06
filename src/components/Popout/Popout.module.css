@@ -13,3 +13,18 @@
   top: 0;
   right: 0;
 }
+@media (max-width: 320px) {
+  .Popout {
+    width: 80vw;
+  }
+}
+@media (min-width: 321px) and (max-width: 720px) {
+  .Popout {
+    width: 70vw;
+  }
+}
+@media (min-width: 721px) and (max-width: 1020px) {
+  .Popout {
+    width: 70vw;
+  }
+}

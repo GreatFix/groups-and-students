@@ -1,0 +1,9 @@
+.List {
+  height: 85vh;
+}
+.Details {
+  height: 55vh;
+}
+.PopoutDetails {
+  min-height: 50vh;
+}

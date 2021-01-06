@@ -165,7 +165,7 @@ const Students = (props) => {
           <Popout onClose={() => setPopout(null)}>
             <Header>Adding</Header>
             <Form submitText={'Send'} onSubmit={handleClickSend}>
-              <Input name="name" label={'Enter a name'} />
+              <Input name="name" label={'Enter a name'} required />
               <Select name="groupName" label={'Select a group'} options={groups} />
             </Form>
           </Popout>

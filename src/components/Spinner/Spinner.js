@@ -4,7 +4,7 @@ import classes from './Spinner.module.css'
 const Spinner = (props) => {
   return (
     <div className={classes.Spinner}>
-      <div></div>
+      <div style={{ backgroundColor: props.centerColor }}></div>
     </div>
   )
 }

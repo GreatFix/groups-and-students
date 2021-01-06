@@ -24,3 +24,9 @@
   font-family: 'Lora', serif;
   margin-left: 5px;
 }
+.ValidateErrorMessage {
+  color: #eb3941;
+}
+.ValidateErrorBorder {
+  border: 2px solid #eb3941 !important;
+}

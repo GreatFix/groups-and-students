@@ -4,6 +4,11 @@
   font-size: 1em;
   min-height: 5vh;
 }
+.Index {
+  flex-grow: 0.15;
+  flex-basis: 15px;
+  text-align: center;
+}
 .Label {
   flex-grow: 3;
   flex-basis: 50px;

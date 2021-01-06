@@ -35,10 +35,11 @@ const List = (props) => {
   return (
     <div className={`${classes.List} ${props.className}`}>
       <ul>
-        {pageContent.map((item) => {
+        {pageContent.map((item, index) => {
           return (
             <Cell
               key={Math.random()}
+              index={props.indexOn ? index + 1 : null}
               subContent={item[props.subProperty]}
               id={item[props.idProperty]}
               onClickLabel={props.onClickLabel}
@@ -50,11 +51,13 @@ const List = (props) => {
           )
         })}
         {!props.array.length && <li className={classes.Alt}>The list is empty</li>}
-        <li className={classes.Add}>
-          <Button color={'success'} onClick={props.onClickAdd}>
-            &#10010;
-          </Button>
-        </li>
+        {props.onClickAdd && (
+          <li className={classes.Add}>
+            <Button color={'success'} onClick={props.onClickAdd}>
+              &#10010;
+            </Button>
+          </li>
+        )}
       </ul>
       <Pagination
         className={classes.Pagination}

@@ -2,6 +2,7 @@
   margin: 8px;
   display: grid;
   grid-template-rows: 20fr 1fr;
+  grid-template-columns: 100%;
 }
 .List ul {
   overflow-y: auto;

@@ -7,6 +7,7 @@ import Sub from '../Sub/Sub'
 const Cell = (props) => {
   return (
     <li className={`${classes.Cell} ${props.className}`}>
+      {props.index && <Sub className={classes.Index}>{props.index}</Sub>}
       {props.onClickLabel ? (
         <Label
           className={classes.Label}

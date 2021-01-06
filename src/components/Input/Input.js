@@ -19,6 +19,7 @@ const Input = (props) => {
         disabled={props.disabled}
         required={props.required}
         spellCheck={'false'}
+        autoFocus={props.autoFocus}
         className={props.validateError && classes.ValidateErrorBorder}
       ></input>
       <p className={classes.ValidateErrorMessage}>{props.validateError}</p>

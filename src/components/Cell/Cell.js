@@ -3,6 +3,7 @@ import classes from './Cell.module.css'
 import Label from '../Label/Label'
 import Button from '../Button/Button'
 import Sub from '../Sub/Sub'
+import PropTypes from 'prop-types'
 
 const Cell = (props) => {
   return (
@@ -46,6 +47,28 @@ const Cell = (props) => {
       )}
     </li>
   )
+}
+
+Cell.propTypes = {
+  className: PropTypes.string,
+  subContent: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  children: PropTypes.node.isRequired,
+  index: PropTypes.number,
+  onClickLabel: PropTypes.func,
+  onClickEdit: PropTypes.func,
+  onClickDelete: PropTypes.func,
+}
+
+Cell.defaultProps = {
+  className: '',
+  subContent: null,
+  id: null,
+  children: '',
+  index: null,
+  onClickLabel: null,
+  onClickEdit: null,
+  onClickDelete: null,
 }
 
 export default Cell

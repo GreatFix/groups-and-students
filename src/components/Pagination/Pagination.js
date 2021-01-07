@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './Pagination.module.css'
 import Button from '../Button/Button'
+import PropTypes from 'prop-types'
 
 const Pagination = (props) => {
   const numbers = []
@@ -23,6 +24,18 @@ const Pagination = (props) => {
       })}
     </div>
   )
+}
+
+Pagination.propTypes = {
+  className: PropTypes.string,
+  size: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired,
+}
+
+Pagination.defaultProps = {
+  className: '',
+  size: 0,
+  onClick: PropTypes.func,
 }
 
 export default Pagination

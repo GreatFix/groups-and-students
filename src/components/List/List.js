@@ -3,6 +3,7 @@ import classes from './List.module.css'
 import Cell from '../Cell/Cell'
 import Pagination from '../Pagination/Pagination'
 import Button from '../Button/Button'
+import PropTypes from 'prop-types'
 
 const List = (props) => {
   const [page, setPage] = useState(1)
@@ -66,6 +67,34 @@ const List = (props) => {
       />
     </div>
   )
+}
+
+List.propTypes = {
+  className: PropTypes.string,
+  idProperty: PropTypes.string,
+  mainProperty: PropTypes.string.isRequired,
+  subProperty: PropTypes.string,
+  pagination: PropTypes.number,
+  indexOn: PropTypes.bool,
+  array: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onClickLabel: PropTypes.func,
+  onClickEdit: PropTypes.func,
+  onClickDelete: PropTypes.func,
+  onClickAdd: PropTypes.func,
+}
+
+List.defaultProps = {
+  className: '',
+  idProperty: 'id',
+  mainProperty: '',
+  subProperty: '',
+  pagination: false,
+  indexOn: false,
+  array: [],
+  onClickLabel: null,
+  onClickEdit: null,
+  onClickDelete: null,
+  onClickAdd: null,
 }
 
 export default List

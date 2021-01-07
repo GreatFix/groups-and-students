@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './Form.module.css'
 import Button from '../../components/Button/Button'
+import PropTypes from 'prop-types'
 
 const Form = (props) => {
   return (
@@ -13,6 +14,18 @@ const Form = (props) => {
       </div>
     </form>
   )
+}
+
+Form.propTypes = {
+  submitText: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+}
+
+Form.defaultProps = {
+  submitText: '',
+  children: null,
+  onSubmit: null,
 }
 
 export default Form

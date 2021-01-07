@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './Input.module.css'
+import PropTypes from 'prop-types'
 
 const Input = (props) => {
   return (
@@ -25,6 +26,34 @@ const Input = (props) => {
       <p className={classes.ValidateErrorMessage}>{props.validateError}</p>
     </div>
   )
+}
+
+Input.propTypes = {
+  className: PropTypes.string,
+  label: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string,
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
+  validateError: PropTypes.string,
+  onChange: PropTypes.func,
+  autoFocus: PropTypes.bool,
+  required: PropTypes.bool,
+  disabled: PropTypes.bool,
+}
+
+Input.defaultProps = {
+  className: '',
+  label: '',
+  name: '',
+  value: '',
+  type: 'text',
+  placeholder: '',
+  validateError: '',
+  onChange: null,
+  autoFocus: null,
+  required: null,
+  disabled: null,
 }
 
 export default Input

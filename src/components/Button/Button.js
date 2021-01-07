@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './Button.module.css'
+import PropTypes from 'prop-types'
 
 const Button = (props) => {
   let color
@@ -16,7 +17,6 @@ const Button = (props) => {
     case 'transparent':
       color = '#00000000'
       break
-
     default:
       color = '#0048BA'
   }
@@ -31,6 +31,24 @@ const Button = (props) => {
       {props.children}
     </button>
   )
+}
+
+Button.propTypes = {
+  className: PropTypes.string,
+  color: PropTypes.oneOf(['danger', 'info', 'success', 'transparent']),
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
+}
+
+Button.defaultProps = {
+  className: '',
+  color: null,
+  type: 'button',
+  children: '',
+  onClick: null,
+  disabled: false,
 }
 
 export default Button

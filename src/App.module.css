@@ -1,19 +1,10 @@
-@media (max-width: 320px) {
-  .Nav li a {
-    font-size: 0.8em !important;
-  }
-}
-@media (min-width: 321px) and (max-width: 650px) {
-  .Nav li a {
-    font-size: 0.9em !important;
-  }
-}
 .Nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 10vh;
   background: linear-gradient(180deg, #007a3d, #00b760);
   grid-gap: 10px;
+  font-size: 1.1em;
 }
 .Nav li {
   display: grid;
@@ -33,7 +24,6 @@
   text-align: center;
   text-decoration: none;
   color: #000;
-  font-size: 1.5em;
   font-family: 'Lora', serif;
 }
 .ActiveLink {

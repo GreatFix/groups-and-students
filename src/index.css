@@ -72,3 +72,26 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+body {
+  font-size: 32px;
+}
+@media screen and (max-width: 1440px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* styles for tablets and small laptops */
+  body {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  /* styles for mobiles  */
+  body {
+    font-size: 14px;
+  }
+}

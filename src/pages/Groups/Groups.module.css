@@ -1,6 +1,10 @@
-.List {
-  height: 85vh;
+.Groups {
+  height: 90vh;
 }
+.List {
+  height: 100%;
+}
+
 .Details {
   height: 55vh;
 }

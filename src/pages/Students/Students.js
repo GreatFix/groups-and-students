@@ -171,7 +171,7 @@ const Students = (props) => {
   const handleClickAdd = useCallback(() => setPopout(ADDING), [])
 
   return (
-    <div>
+    <div className={classes.Students}>
       {fetching ? (
         <Spinner />
       ) : error ? (

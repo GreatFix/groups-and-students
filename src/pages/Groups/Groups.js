@@ -180,7 +180,7 @@ const Groups = (props) => {
   const handleClickAdd = useCallback(() => setPopout(ADDING), [])
 
   return (
-    <div>
+    <div className={classes.Groups}>
       {fetching ? (
         <Spinner />
       ) : error ? (

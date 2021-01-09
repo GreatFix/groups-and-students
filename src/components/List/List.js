@@ -81,7 +81,7 @@ const List = (props) => {
 
   return (
     <div className={`${classes.List} ${props.className}`}>
-      <ul style={{ overflowY: props.pagination > 10 ? 'scroll' : 'hidden' }}>
+      <ul style={{ overflowY: props.pagination > 5 ? 'auto' : 'hidden' }}>
         {transitions.map(({ item, key, props: styles }) => {
           return (
             <Cell

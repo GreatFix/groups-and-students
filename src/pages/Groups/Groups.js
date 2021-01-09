@@ -191,28 +191,30 @@ const Groups = (props) => {
       ) : error ? (
         <Popout onClose={() => setError(null)}>{error}</Popout>
       ) : (
-        <>
-          <List
-            className={classes.List}
-            onClickLabel={handleClickLabel}
-            onClickEdit={handleClickEdit}
-            onClickDelete={handleClickDelete}
-            onClickAdd={handleClickAdd}
-            array={groups}
-            mainProperty={'name'}
-            idProperty={'id'}
-            pagination={paginationSize}
-          />
-          <div className={classes.PaginationSelect}>
-            <Select
-              name="paginationSize"
-              value={paginationSize}
-              onChange={onChangePaginationSize}
-              label={'Lines per page'}
-              options={NUMBERS}
+        groups && (
+          <>
+            <List
+              className={classes.List}
+              onClickLabel={handleClickLabel}
+              onClickEdit={handleClickEdit}
+              onClickDelete={handleClickDelete}
+              onClickAdd={handleClickAdd}
+              array={groups}
+              mainProperty={'name'}
+              idProperty={'id'}
+              pagination={paginationSize}
             />
-          </div>
-        </>
+            <div className={classes.PaginationSelect}>
+              <Select
+                name="paginationSize"
+                value={paginationSize}
+                onChange={onChangePaginationSize}
+                label={'Lines per page'}
+                options={NUMBERS}
+              />
+            </div>
+          </>
+        )
       )}
       {popout === ADDING ? (
         <Popout onClose={handleClickClosePopout}>
@@ -253,18 +255,20 @@ const Groups = (props) => {
             ) : errorDetails ? (
               <Popout onClose={() => setError(null)}>{error}</Popout>
             ) : (
-              <>
-                <Header>Details</Header>
-                <Sub>{details.name}</Sub>
-                <List
-                  indexOn
-                  className={classes.Details}
-                  array={details.students}
-                  mainProperty={'name'}
-                  idProperty={'id'}
-                  pagination={5}
-                />
-              </>
+              details && (
+                <>
+                  <Header>Details</Header>
+                  <Sub>{details.name}</Sub>
+                  <List
+                    indexOn
+                    className={classes.Details}
+                    array={details.students}
+                    mainProperty={'name'}
+                    idProperty={'id'}
+                    pagination={5}
+                  />
+                </>
+              )
             )}
           </Popout>
         )

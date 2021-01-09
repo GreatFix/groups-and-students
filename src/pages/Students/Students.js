@@ -181,28 +181,30 @@ const Students = (props) => {
       ) : error ? (
         <Popout onClose={() => setError(null)}>{error}</Popout>
       ) : (
-        <>
-          <List
-            className={classes.List}
-            onClickEdit={handleClickEdit}
-            onClickDelete={handleClickDelete}
-            onClickAdd={handleClickAdd}
-            array={students}
-            mainProperty={'name'}
-            subProperty={'groupName'}
-            idProperty={'id'}
-            pagination={paginationSize}
-          />
-          <div className={classes.PaginationSelect}>
-            <Select
-              name="paginationSize"
-              value={paginationSize}
-              onChange={onChangePaginationSize}
-              label={'Lines per page'}
-              options={NUMBERS}
+        students && (
+          <>
+            <List
+              className={classes.List}
+              onClickEdit={handleClickEdit}
+              onClickDelete={handleClickDelete}
+              onClickAdd={handleClickAdd}
+              array={students}
+              mainProperty={'name'}
+              subProperty={'groupName'}
+              idProperty={'id'}
+              pagination={paginationSize}
             />
-          </div>
-        </>
+            <div className={classes.PaginationSelect}>
+              <Select
+                name="paginationSize"
+                value={paginationSize}
+                onChange={onChangePaginationSize}
+                label={'Lines per page'}
+                options={NUMBERS}
+              />
+            </div>
+          </>
+        )
       )}
       {popout === ADDING ? (
         <Popout onClose={handleClickClosePopout}>

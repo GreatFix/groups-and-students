@@ -1,9 +1,10 @@
 .List {
   padding: 8px;
   display: grid;
-  grid-template-rows: 20fr 1fr;
+  grid-template-rows: auto 1.3em;
   grid-template-columns: 80%;
   justify-content: center;
+  gap: 10px;
 }
 .List ul {
   overflow-y: auto;

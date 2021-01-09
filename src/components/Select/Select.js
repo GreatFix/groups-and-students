@@ -13,6 +13,7 @@ const Select = (props) => {
         required={props.required}
         spellCheck={'false'}
         defaultValue={props.defaultValue}
+        value={props.value}
       >
         {props.options &&
           props.options.map((item) => {
@@ -32,6 +33,7 @@ Select.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string,
   onChange: PropTypes.func,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])).isRequired,
   required: PropTypes.bool,
@@ -43,6 +45,7 @@ Select.defaultProps = {
   name: '',
   label: '',
   onChange: null,
+  value: null,
   defaultValue: '',
   options: [],
   required: false,

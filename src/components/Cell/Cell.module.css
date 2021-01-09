@@ -2,7 +2,6 @@
   list-style: none;
   display: flex;
   font-size: 1em;
-  min-height: 5vh;
 }
 .Index {
   flex-grow: 0.15;

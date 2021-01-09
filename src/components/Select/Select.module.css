@@ -13,7 +13,6 @@
   font-size: 1em;
   font-family: 'Roboto Slab', serif;
   padding: 5px;
-  margin: 4px 2px 0 2px;
   cursor: pointer;
 }
 .Select select:focus {

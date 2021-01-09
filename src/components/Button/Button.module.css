@@ -1,4 +1,7 @@
 .Button {
+  display: grid;
+  justify-content: center;
+  align-content: center;
   background-color: #70ce9b;
   box-sizing: border-box;
   border: 0;

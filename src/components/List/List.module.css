@@ -1,9 +1,9 @@
 .List {
-  margin-left: 8px;
-  margin-right: 8px;
+  padding: 8px;
   display: grid;
   grid-template-rows: 20fr 1fr;
-  grid-template-columns: 100%;
+  grid-template-columns: 80%;
+  justify-content: center;
 }
 .List ul {
   overflow-y: auto;

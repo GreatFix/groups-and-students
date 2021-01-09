@@ -30,11 +30,11 @@ const Input = (props) => {
 
 Input.propTypes = {
   className: PropTypes.string,
-  label: PropTypes.string,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   name: PropTypes.string.isRequired,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   type: PropTypes.string,
-  placeholder: PropTypes.string,
+  placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   validateError: PropTypes.string,
   onChange: PropTypes.func,
   autoFocus: PropTypes.bool,

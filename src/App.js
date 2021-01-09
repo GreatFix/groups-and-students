@@ -1,13 +1,13 @@
 import React from 'react'
 import classes from './App.module.css'
-import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom'
+import { HashRouter, Switch, Route, NavLink } from 'react-router-dom'
 import Groups from './pages/Groups/Groups'
 import Students from './pages/Students/Students'
 import Home from './pages/Home/Home'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter basename="/groups-and-students">
       <nav className={classes.Nav}>
         <li>
           <NavLink exact activeClassName={classes.ActiveLink} to="/">
@@ -36,7 +36,7 @@ function App() {
           <Home />
         </Route>
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

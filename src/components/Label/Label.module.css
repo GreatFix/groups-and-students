@@ -7,7 +7,7 @@
   font-size: 1em;
   font-family: 'Roboto Condensed', sans-serif;
   padding: 5px;
-  margin: 2px;
+  margin: 4px 2px 0 2px;
 }
 .Hover:hover {
   background-color: #41f041;

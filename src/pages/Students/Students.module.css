@@ -4,3 +4,9 @@
 .List {
   height: 100%;
 }
+.PaginationSelect {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 0.6em;
+}

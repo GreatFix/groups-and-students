@@ -11,6 +11,7 @@ import Spinner from '../../components/Spinner/Spinner'
 
 const ADDING = 'ADDING'
 const EDITING = 'EDITING'
+const NUMBERS = [5, 10, 15, 20, 30, 40, 50, 100]
 
 const API = axios.create({
   baseURL: 'https://rest-groups-and-students.herokuapp.com/',
@@ -26,6 +27,7 @@ const Students = (props) => {
   const [popout, setPopout] = useState(null)
   const [validateError, setValidateError] = useState(null)
   const [inputStudent, setInputStudent] = useState({ id: null, name: '', groupName: '' })
+  const [paginationSize, setPaginationSize] = useState(5)
 
   useEffect(() => {
     setFetching(true)
@@ -59,6 +61,8 @@ const Students = (props) => {
     },
     [students, validateError]
   )
+
+  const onChangePaginationSize = useCallback((e) => setPaginationSize(+e.target.value), [])
 
   const handleClickClosePopout = useCallback(() => {
     setPopout(null)
@@ -177,17 +181,28 @@ const Students = (props) => {
       ) : error ? (
         <Popout onClose={() => setError(null)}>{error}</Popout>
       ) : (
-        <List
-          className={classes.List}
-          onClickEdit={handleClickEdit}
-          onClickDelete={handleClickDelete}
-          onClickAdd={handleClickAdd}
-          array={students}
-          mainProperty={'name'}
-          subProperty={'groupName'}
-          idProperty={'id'}
-          pagination={10}
-        />
+        <>
+          <List
+            className={classes.List}
+            onClickEdit={handleClickEdit}
+            onClickDelete={handleClickDelete}
+            onClickAdd={handleClickAdd}
+            array={students}
+            mainProperty={'name'}
+            subProperty={'groupName'}
+            idProperty={'id'}
+            pagination={paginationSize}
+          />
+          <div className={classes.PaginationSelect}>
+            <Select
+              name="paginationSize"
+              value={paginationSize}
+              onChange={onChangePaginationSize}
+              label={'Lines per page'}
+              options={NUMBERS}
+            />
+          </div>
+        </>
       )}
       {popout === ADDING ? (
         <Popout onClose={handleClickClosePopout}>

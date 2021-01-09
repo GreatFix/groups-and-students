@@ -8,10 +8,12 @@ import Header from '../../components/Header/Header'
 import Form from '../../components/Form/Form'
 import Spinner from '../../components/Spinner/Spinner'
 import Sub from '../../components/Sub/Sub'
+import Select from '../../components/Select/Select'
 
 const ADDING = 'ADDING'
 const EDITING = 'EDITING'
 const DETAILS = 'DETAILS'
+const NUMBERS = [5, 10, 15, 20, 30, 40, 50, 100]
 
 const API = axios.create({
   baseURL: 'https://rest-groups-and-students.herokuapp.com/',
@@ -29,6 +31,7 @@ const Groups = (props) => {
   const [popout, setPopout] = useState(null)
   const [validateError, setValidateError] = useState(null)
   const [inputGroup, setInputGroup] = useState({ id: null, name: '' })
+  const [paginationSize, setPaginationSize] = useState(5)
 
   useEffect(() => {
     setFetching(true)
@@ -61,6 +64,8 @@ const Groups = (props) => {
     setInputGroup({ id: null, name: '' })
     validateError && setValidateError(null)
   }, [validateError])
+
+  const onChangePaginationSize = useCallback((e) => setPaginationSize(+e.target.value), [])
 
   const handleClickAccept = useCallback(
     (e) => {
@@ -186,17 +191,28 @@ const Groups = (props) => {
       ) : error ? (
         <Popout onClose={() => setError(null)}>{error}</Popout>
       ) : (
-        <List
-          className={classes.List}
-          onClickLabel={handleClickLabel}
-          onClickEdit={handleClickEdit}
-          onClickDelete={handleClickDelete}
-          onClickAdd={handleClickAdd}
-          array={groups}
-          mainProperty={'name'}
-          idProperty={'id'}
-          pagination={10}
-        />
+        <>
+          <List
+            className={classes.List}
+            onClickLabel={handleClickLabel}
+            onClickEdit={handleClickEdit}
+            onClickDelete={handleClickDelete}
+            onClickAdd={handleClickAdd}
+            array={groups}
+            mainProperty={'name'}
+            idProperty={'id'}
+            pagination={paginationSize}
+          />
+          <div className={classes.PaginationSelect}>
+            <Select
+              name="paginationSize"
+              value={paginationSize}
+              onChange={onChangePaginationSize}
+              label={'Lines per page'}
+              options={NUMBERS}
+            />
+          </div>
+        </>
       )}
       {popout === ADDING ? (
         <Popout onClose={handleClickClosePopout}>

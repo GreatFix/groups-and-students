@@ -6,8 +6,14 @@
 }
 
 .Details {
-  height: 55vh;
+  height: 100%;
 }
 .PopoutDetails {
   min-height: 50vh;
+}
+.PaginationSelect {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 0.6em;
 }

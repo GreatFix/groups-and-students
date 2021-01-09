@@ -20,8 +20,8 @@ const API = axios.create({
 })
 
 const Students = (props) => {
-  const [students, setStudents] = useState([])
-  const [groups, setGroups] = useState([])
+  const [students, setStudents] = useState(null)
+  const [groups, setGroups] = useState(null)
   const [error, setError] = useState(null)
   const [fetching, setFetching] = useState(false)
   const [popout, setPopout] = useState(null)

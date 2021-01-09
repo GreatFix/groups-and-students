@@ -22,7 +22,7 @@ const API = axios.create({
 })
 
 const Groups = (props) => {
-  const [groups, setGroups] = useState([])
+  const [groups, setGroups] = useState(null)
   const [error, setError] = useState(null)
   const [fetching, setFetching] = useState(false)
   const [details, setDetails] = useState(null)

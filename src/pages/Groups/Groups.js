@@ -17,7 +17,7 @@ const NUMBERS = [5, 10, 15, 20, 30, 40, 50, 100]
 
 const API = axios.create({
   baseURL: 'https://rest-groups-and-students.herokuapp.com/',
-  timeout: 10000,
+  timeout: 30000,
   crossDomain: true,
 })
 

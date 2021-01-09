@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/groups-and-students/static/css/main.1e2cc729.chunk.css",
+    "main.css": "/groups-and-students/static/css/main.69a32825.chunk.css",
     "main.js": "/groups-and-students/static/js/main.59c792a6.chunk.js",
     "main.js.map": "/groups-and-students/static/js/main.59c792a6.chunk.js.map",
     "runtime-main.js": "/groups-and-students/static/js/runtime-main.911f8d23.js",
@@ -10,14 +10,14 @@
     "static/js/3.1512d2b5.chunk.js": "/groups-and-students/static/js/3.1512d2b5.chunk.js",
     "static/js/3.1512d2b5.chunk.js.map": "/groups-and-students/static/js/3.1512d2b5.chunk.js.map",
     "index.html": "/groups-and-students/index.html",
-    "static/css/main.1e2cc729.chunk.css.map": "/groups-and-students/static/css/main.1e2cc729.chunk.css.map",
+    "static/css/main.69a32825.chunk.css.map": "/groups-and-students/static/css/main.69a32825.chunk.css.map",
     "static/js/2.1b626c78.chunk.js.LICENSE.txt": "/groups-and-students/static/js/2.1b626c78.chunk.js.LICENSE.txt",
     "static/media/Diagram.9d3e0c66.png": "/groups-and-students/static/media/Diagram.9d3e0c66.png"
   },
   "entrypoints": [
     "static/js/runtime-main.911f8d23.js",
     "static/js/2.1b626c78.chunk.js",
-    "static/css/main.1e2cc729.chunk.css",
+    "static/css/main.69a32825.chunk.css",
     "static/js/main.59c792a6.chunk.js"
   ]
 }

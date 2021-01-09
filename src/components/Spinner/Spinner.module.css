@@ -4,7 +4,7 @@
   justify-content: center;
   width: 10vh;
   height: 10vh;
-  position: fixed;
+  position: absolute;
   left: 50%;
   top: 50%;
   background-color: #1e7a6d;

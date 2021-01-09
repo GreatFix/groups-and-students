@@ -7,7 +7,7 @@
   gap: 10px;
 }
 .List ul {
-  overflow-y: auto;
+  overflow-x: hidden;
 }
 .Add {
   display: flex;

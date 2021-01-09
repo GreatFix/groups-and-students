@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react'
+import React, { useState, useCallback, useEffect, useRef } from 'react'
 import classes from './List.module.css'
 import Cell from '../Cell/Cell'
 import Pagination from '../Pagination/Pagination'
@@ -6,14 +6,55 @@ import Button from '../Button/Button'
 import PropTypes from 'prop-types'
 import addIcon from '../../images/add.png'
 
+import { useTransition } from 'react-spring'
+
 const List = (props) => {
   const [page, setPage] = useState(1)
   const [pageContent, setPageContent] = useState([])
 
+  const prevPageRef = useRef(0)
+  const transitions = useTransition(
+    pageContent,
+    (item) => item.id,
+    props.pagination > 5
+      ? page > prevPageRef.current
+        ? {
+            config: { easing: 'd3-ease' },
+            from: { transform: 'translateY(-100vh)' },
+            initial: { transform: 'translateY(0%)' },
+            enter: { transform: 'translateY(0%)' },
+            leave: { display: 'none' },
+          }
+        : {
+            config: { easing: 'd3-ease' },
+            from: { transform: 'translateY(100vh)' },
+            initial: { transform: 'translateY(0%)' },
+            enter: { transform: 'translateY(0%)' },
+            leave: { display: 'none' },
+          }
+      : page > prevPageRef.current
+      ? {
+          config: { easing: 'd3-ease' },
+          trail: props.pagination > 5 ? 5 : 12,
+          from: { transform: 'translateX(100%)' },
+          initial: { transform: 'translateX(0%)' },
+          enter: { transform: 'translateX(0%)' },
+          leave: { transform: 'translateX(-100%)' },
+        }
+      : {
+          config: { easing: 'd3-ease' },
+          trail: props.pagination > 5 ? 5 : 12,
+          from: { transform: 'translateX(-100%)' },
+          initial: { transform: 'translateX(0%)' },
+          enter: { transform: 'translateX(0%)' },
+          leave: { transform: 'translateX(100%)' },
+        }
+  )
+
   useEffect(() => {
     const temp = []
     for (let i = props.pagination * (page - 1); i < props.pagination * page; i++)
-      props.array[i] && temp.push(props.array[i])
+      props.array[i] && temp.push({ ...props.array[i], index: i })
     setPageContent(temp)
   }, [page, props.array, props.array.length, props.pagination])
 
@@ -23,9 +64,13 @@ const List = (props) => {
     }
   }, [pageContent, page])
 
-  const handleClickPaginationButton = useCallback((number) => {
-    setPage(number)
-  }, [])
+  const handleClickPaginationButton = useCallback(
+    (number) => {
+      prevPageRef.current = page
+      setPage(number)
+    },
+    [page]
+  )
 
   let paginationSize
   if (props.array.length % props.pagination) {
@@ -36,12 +81,13 @@ const List = (props) => {
 
   return (
     <div className={`${classes.List} ${props.className}`}>
-      <ul>
-        {pageContent.map((item, index) => {
+      <ul style={{ overflowY: props.pagination > 10 ? 'scroll' : 'hidden' }}>
+        {transitions.map(({ item, key, props: styles }) => {
           return (
             <Cell
-              key={Math.random()}
-              index={props.indexOn ? index + 1 : null}
+              key={key}
+              style={styles}
+              index={props.indexOn ? item.index + 1 : null}
               subContent={item[props.subProperty]}
               id={item[props.idProperty]}
               onClickLabel={props.onClickLabel}

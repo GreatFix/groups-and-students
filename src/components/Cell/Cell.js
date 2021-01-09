@@ -7,9 +7,11 @@ import PropTypes from 'prop-types'
 import DeleteIcon from '../../images/delete.png'
 import EditIcon from '../../images/edit.png'
 
+import { animated } from 'react-spring'
+
 const Cell = (props) => {
   return (
-    <li className={`${classes.Cell} ${props.className}`}>
+    <animated.li className={`${classes.Cell} ${props.className}`} style={props.style}>
       {props.index && <Sub className={classes.Index}>{props.index}</Sub>}
       {props.onClickLabel ? (
         <Label
@@ -47,7 +49,7 @@ const Cell = (props) => {
           <img src={DeleteIcon} alt={'delete'} />
         </Button>
       )}
-    </li>
+    </animated.li>
   )
 }
 

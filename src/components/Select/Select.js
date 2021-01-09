@@ -46,7 +46,7 @@ Select.defaultProps = {
   label: '',
   onChange: null,
   value: undefined,
-  defaultValue: '',
+  defaultValue: undefined,
   options: [],
   required: false,
   disabled: false,

@@ -4,6 +4,8 @@ import Label from '../Label/Label'
 import Button from '../Button/Button'
 import Sub from '../Sub/Sub'
 import PropTypes from 'prop-types'
+import DeleteIcon from '../../images/delete.png'
+import EditIcon from '../../images/edit.png'
 
 const Cell = (props) => {
   return (
@@ -31,7 +33,7 @@ const Cell = (props) => {
           }}
           color="info"
         >
-          EDIT
+          <img src={EditIcon} alt={'edit'} />
         </Button>
       )}
       {props.onClickDelete && (
@@ -42,7 +44,7 @@ const Cell = (props) => {
           }}
           color="danger"
         >
-          DELETE
+          <img src={DeleteIcon} alt={'delete'} />
         </Button>
       )}
     </li>

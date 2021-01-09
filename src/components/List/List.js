@@ -4,6 +4,7 @@ import Cell from '../Cell/Cell'
 import Pagination from '../Pagination/Pagination'
 import Button from '../Button/Button'
 import PropTypes from 'prop-types'
+import addIcon from '../../images/add.png'
 
 const List = (props) => {
   const [page, setPage] = useState(1)
@@ -55,7 +56,7 @@ const List = (props) => {
         {props.onClickAdd && (
           <li className={classes.Add}>
             <Button color={'success'} onClick={props.onClickAdd}>
-              &#10010;
+              <img src={addIcon} alt={'add'} />
             </Button>
           </li>
         )}

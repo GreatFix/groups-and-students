@@ -10,6 +10,8 @@ run `npm install`(or `yarn`)
 
 ## Stack
 
+> Frontend
+>
 > - React
 >   - useState
 >   - useEffect
@@ -19,6 +21,13 @@ run `npm install`(or `yarn`)
 >   - useTransitions
 > - prop-types
 > - react-router-dom
+>
+> Backend
+>
+> - Nodejs
+> - Express
+> - PostgreSQL
+>   - Sequelize
 
 ## Screencast
 
@@ -27,3 +36,5 @@ run `npm install`(or `yarn`)
 ## Links
 
 #### [Github Page](https://greatfix.github.io/groups-and-students)
+
+#### [Backend git](https://github.com/GreatFix/rest-orm-pg-js)

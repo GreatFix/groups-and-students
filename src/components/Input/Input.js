@@ -3,15 +3,19 @@ import classes from './Input.module.css'
 import PropTypes from 'prop-types'
 
 const Input = (props) => {
+  if (props.label && !props.id) {
+    console.error('Label is not associated with input, since you did not pass id!')
+  }
   return (
     <div className={`${classes.Input} ${props.className}`}>
       {props.label && (
-        <p>
+        <label htmlFor={props.id}>
           {props.label}
-          {props.required && <em>*</em>}
-        </p>
+          {props.required && '*'}
+        </label>
       )}
       <input
+        id={props.id}
         name={props.name}
         value={props.value}
         type={props.type}
@@ -22,13 +26,14 @@ const Input = (props) => {
         spellCheck={'false'}
         autoFocus={props.autoFocus}
         className={props.validateError && classes.ValidateErrorBorder}
-      ></input>
+      />
       <p className={classes.ValidateErrorMessage}>{props.validateError}</p>
     </div>
   )
 }
 
 Input.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   className: PropTypes.string,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   name: PropTypes.string.isRequired,
@@ -43,6 +48,7 @@ Input.propTypes = {
 }
 
 Input.defaultProps = {
+  id: '',
   className: '',
   label: '',
   name: '',

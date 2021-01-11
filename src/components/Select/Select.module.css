@@ -19,8 +19,7 @@
   border: 1px solid #000;
   padding: 4px;
 }
-.Select p {
+.Select label {
   font-size: 0.9em;
-  font-family: 'Lora', serif;
-  margin-left: 5px;
+  font-family: 'Roboto Slab', serif;
 }

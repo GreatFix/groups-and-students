@@ -206,6 +206,7 @@ const Groups = (props) => {
             />
             <div className={classes.PaginationSelect}>
               <Select
+                id="paginationSize"
                 name="paginationSize"
                 value={paginationSize}
                 onChange={onChangePaginationSize}
@@ -221,6 +222,7 @@ const Groups = (props) => {
           <Header>Adding</Header>
           <Form submitText={'Send'} onSubmit={handleClickSend}>
             <Input
+              id="name"
               name="name"
               value={inputGroup.name}
               onChange={onChangeInput}
@@ -237,6 +239,7 @@ const Groups = (props) => {
           <Form submitText={'Accept'} onSubmit={handleClickAccept}>
             <input hidden name="id" value={inputGroup.id} readOnly />
             <Input
+              id="name"
               name="name"
               value={inputGroup.name}
               onChange={onChangeInput}

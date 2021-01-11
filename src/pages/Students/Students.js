@@ -196,6 +196,7 @@ const Students = (props) => {
             />
             <div className={classes.PaginationSelect}>
               <Select
+                id="paginationSize"
                 name="paginationSize"
                 value={paginationSize}
                 onChange={onChangePaginationSize}
@@ -211,6 +212,7 @@ const Students = (props) => {
           <Header>Adding</Header>
           <Form submitText={'Send'} onSubmit={handleClickSend}>
             <Input
+              id="name"
               name="name"
               value={inputStudent.name}
               onChange={onChangeInput}
@@ -219,7 +221,7 @@ const Students = (props) => {
               required
               autoFocus
             />
-            <Select name="groupName" label={'Select a group'} options={groups} />
+            <Select id="groupName" name="groupName" label={'Select a group'} options={groups} />
           </Form>
         </Popout>
       ) : (
@@ -229,15 +231,16 @@ const Students = (props) => {
             <Form submitText={'Accept'} onSubmit={handleClickAccept}>
               <input hidden name="id" value={inputStudent.id} readOnly />
               <Input
+                id="name"
                 name="name"
                 value={inputStudent.name}
                 onChange={onChangeInput}
                 validateError={validateError}
                 label={'Enter a name'}
-                required
                 autoFocus
               />
               <Select
+                id="groupName"
                 name="groupName"
                 label={'Select a group'}
                 options={groups}

@@ -30,3 +30,7 @@
 .ValidateErrorBorder {
   border: 2px solid #eb3941 !important;
 }
+.Input label {
+  font-size: 0.9em;
+  font-family: 'Roboto Slab', serif;
+}

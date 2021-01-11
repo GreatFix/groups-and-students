@@ -28,4 +28,4 @@ Form.defaultProps = {
   onSubmit: null,
 }
 
-export default Form
+export default React.memo(Form)

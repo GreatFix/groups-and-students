@@ -16,4 +16,4 @@ Header.defaultProps = {
   children: null,
 }
 
-export default Header
+export default React.memo(Header)

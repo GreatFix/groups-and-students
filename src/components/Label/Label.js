@@ -25,4 +25,4 @@ Label.defaultProps = {
   onClick: null,
 }
 
-export default Label
+export default React.memo(Label)

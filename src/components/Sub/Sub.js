@@ -16,4 +16,4 @@ Sub.defaultProps = {
   children: null,
 }
 
-export default Sub
+export default React.memo(Sub)

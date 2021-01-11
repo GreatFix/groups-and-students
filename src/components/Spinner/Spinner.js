@@ -18,4 +18,4 @@ Spinner.defaultProps = {
   centerColor: '#00994f',
 }
 
-export default Spinner
+export default React.memo(Spinner)

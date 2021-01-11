@@ -33,4 +33,4 @@ Popout.defaultProps = {
   children: null,
 }
 
-export default Popout
+export default React.memo(Popout)

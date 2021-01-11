@@ -38,4 +38,4 @@ Pagination.defaultProps = {
   onClick: PropTypes.func,
 }
 
-export default Pagination
+export default React.memo(Pagination)

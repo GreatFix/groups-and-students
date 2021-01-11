@@ -1,11 +1,11 @@
 import React from 'react'
-import classes from './Label.module.css'
+import classes from './SimpleCell.module.css'
 import PropTypes from 'prop-types'
 
-const Label = (props) => {
+const SimpleCell = (props) => {
   return (
     <p
-      className={`${classes.Label} ${props.className} ${props.onClick && classes.Hover}`}
+      className={`${classes.SimpleCell} ${props.className} ${props.onClick && classes.Hover}`}
       onClick={props.onClick}
     >
       {props.children}
@@ -13,16 +13,16 @@ const Label = (props) => {
   )
 }
 
-Label.propTypes = {
+SimpleCell.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
 }
 
-Label.defaultProps = {
+SimpleCell.defaultProps = {
   className: '',
   children: null,
   onClick: null,
 }
 
-export default React.memo(Label)
+export default React.memo(SimpleCell)

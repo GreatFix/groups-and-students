@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './Cell.module.css'
-import Label from '../Label/Label'
+import SimpleCell from '../SimpleCell/SimpleCell'
 import Button from '../Button/Button'
 import Sub from '../Sub/Sub'
 import PropTypes from 'prop-types'
@@ -14,16 +14,16 @@ const Cell = (props) => {
     <animated.li className={`${classes.Cell} ${props.className}`} style={props.style}>
       {props.index && <Sub className={classes.Index}>{props.index}</Sub>}
       {props.onClickLabel ? (
-        <Label
-          className={classes.Label}
+        <SimpleCell
+          className={classes.SimpleCell}
           onClick={() => {
             props.onClickLabel(props.id)
           }}
         >
           {props.children}
-        </Label>
+        </SimpleCell>
       ) : (
-        <Label className={classes.Label}>{props.children}</Label>
+        <SimpleCell className={classes.SimpleCell}>{props.children}</SimpleCell>
       )}
       {props.subContent && <Sub className={classes.Sub}>{props.subContent}</Sub>}
 

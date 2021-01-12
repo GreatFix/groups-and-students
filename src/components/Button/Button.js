@@ -46,7 +46,7 @@ Button.defaultProps = {
   className: '',
   color: null,
   type: 'button',
-  children: '',
+  children: null,
   onClick: null,
   disabled: false,
 }

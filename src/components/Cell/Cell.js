@@ -68,7 +68,7 @@ Cell.defaultProps = {
   className: '',
   subContent: null,
   id: null,
-  children: '',
+  children: null,
   index: null,
   onClickLabel: null,
   onClickEdit: null,

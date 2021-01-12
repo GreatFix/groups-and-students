@@ -48,14 +48,14 @@ Input.propTypes = {
 }
 
 Input.defaultProps = {
-  id: '',
+  id: null,
   className: '',
-  label: '',
-  name: '',
-  value: '',
+  label: null,
+  name: null,
+  value: null,
   type: 'text',
-  placeholder: '',
-  validateError: '',
+  placeholder: null,
+  validateError: null,
   onChange: null,
   autoFocus: null,
   required: null,

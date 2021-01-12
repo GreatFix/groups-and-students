@@ -51,10 +51,10 @@ Select.propTypes = {
 }
 
 Select.defaultProps = {
-  id: '',
+  id: null,
   className: '',
-  name: '',
-  label: '',
+  name: null,
+  label: null,
   onChange: null,
   value: undefined,
   defaultValue: undefined,

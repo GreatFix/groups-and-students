@@ -133,8 +133,8 @@ List.propTypes = {
 List.defaultProps = {
   className: '',
   idProperty: 'id',
-  mainProperty: '',
-  subProperty: '',
+  mainProperty: null,
+  subProperty: null,
   pagination: 5,
   indexOn: false,
   array: [],

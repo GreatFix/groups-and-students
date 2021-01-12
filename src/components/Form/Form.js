@@ -23,7 +23,7 @@ Form.propTypes = {
 }
 
 Form.defaultProps = {
-  submitText: '',
+  submitText: 'submit',
   children: null,
   onSubmit: null,
 }

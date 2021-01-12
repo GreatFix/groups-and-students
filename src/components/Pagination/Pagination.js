@@ -34,7 +34,7 @@ Pagination.propTypes = {
 
 Pagination.defaultProps = {
   className: '',
-  size: 0,
+  size: null,
   onClick: PropTypes.func,
 }
 

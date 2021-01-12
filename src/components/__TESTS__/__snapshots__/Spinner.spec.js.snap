@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner render 1`] = `
+<div
+  class="Spinner"
+>
+  <div
+    style="background: rgb(0, 153, 79);"
+  />
+</div>
+`;

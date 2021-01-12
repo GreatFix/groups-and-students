@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleCell render properly 1`] = `
+<div>
+  <p
+    class="SimpleCell  "
+  >
+    May the force be with you
+  </p>
+</div>
+`;

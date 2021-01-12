@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select render with all the props in addition to defaultValue 1`] = `
+<select
+  disabled=""
+  id="TEST_ID"
+  name="TEST_NAME"
+  required=""
+  spellcheck="false"
+>
+  <option
+    value="option_1"
+  >
+    option_1
+  </option>
+  <option
+    value="option_2"
+  >
+    option_2
+  </option>
+  <option
+    value="option_3"
+  >
+    option_3
+  </option>
+</select>
+`;

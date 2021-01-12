@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List renders with array and mainProperty render properly 1`] = `
+<div
+  class="List "
+>
+  <ul
+    style="overflow-y: hidden;"
+  >
+    <li
+      class="Cell "
+      style="transform: translateX(0%);"
+    >
+      <p
+        class="SimpleCell SimpleCell "
+      >
+        TEST_NAME
+      </p>
+    </li>
+    <li
+      class="Cell "
+      style="transform: translateX(0%);"
+    >
+      <p
+        class="SimpleCell SimpleCell "
+      >
+        TestName2
+      </p>
+    </li>
+    <li
+      class="Cell "
+      style="transform: translateX(0%);"
+    >
+      <p
+        class="SimpleCell SimpleCell "
+      >
+        TestName3
+      </p>
+    </li>
+  </ul>
+  <div
+    class="Pagination Pagination"
+  >
+    <button
+      class="Button "
+      style="background-color: rgb(0, 72, 186);"
+      type="button"
+    >
+      1
+    </button>
+  </div>
+</div>
+`;
+
+exports[`List renders with array, mainProperty and indexOn render properly 1`] = `
+<div
+  class="List "
+>
+  <ul
+    style="overflow-y: hidden;"
+  >
+    <li
+      class="Cell "
+      style="transform: translateX(0%);"
+    >
+      <p
+        class="Sub Index"
+      >
+        1
+      </p>
+      <p
+        class="SimpleCell SimpleCell "
+      >
+        TEST_NAME
+      </p>
+    </li>
+    <li
+      class="Cell "
+      style="transform: translateX(0%);"
+    >
+      <p
+        class="Sub Index"
+      >
+        2
+      </p>
+      <p
+        class="SimpleCell SimpleCell "
+      >
+        TestName2
+      </p>
+    </li>
+    <li
+      class="Cell "
+      style="transform: translateX(0%);"
+    >
+      <p
+        class="Sub Index"
+      >
+        3
+      </p>
+      <p
+        class="SimpleCell SimpleCell "
+      >
+        TestName3
+      </p>
+    </li>
+  </ul>
+  <div
+    class="Pagination Pagination"
+  >
+    <button
+      class="Button "
+      style="background-color: rgb(0, 72, 186);"
+      type="button"
+    >
+      1
+    </button>
+  </div>
+</div>
+`;
+
+exports[`List renders with array, mainProperty and pagination render properly 1`] = `
+<div
+  class="List "
+>
+  <ul
+    style="overflow-y: hidden;"
+  >
+    <li
+      class="Cell "
+      style="transform: translateX(0%);"
+    >
+      <p
+        class="SimpleCell SimpleCell "
+      >
+        TEST_NAME
+      </p>
+    </li>
+    <li
+      class="Cell "
+      style="transform: translateX(0%);"
+    >
+      <p
+        class="SimpleCell SimpleCell "
+      >
+        TestName2
+      </p>
+    </li>
+  </ul>
+  <div
+    class="Pagination Pagination"
+  >
+    <button
+      class="Button "
+      style="background-color: rgb(0, 72, 186);"
+      type="button"
+    >
+      1
+    </button>
+    <button
+      class="Button "
+      style="background-color: rgb(0, 72, 186);"
+      type="button"
+    >
+      2
+    </button>
+  </div>
+</div>
+`;
+
+exports[`List renders with array, mainProperty and subProperty render properly 1`] = `
+<div
+  class="List "
+>
+  <ul
+    style="overflow-y: hidden;"
+  >
+    <li
+      class="Cell "
+      style="transform: translateX(0%);"
+    >
+      <p
+        class="SimpleCell SimpleCell "
+      >
+        TEST_NAME
+      </p>
+      <p
+        class="Sub Sub"
+      >
+        TEST_LASTNAME
+      </p>
+    </li>
+    <li
+      class="Cell "
+      style="transform: translateX(0%);"
+    >
+      <p
+        class="SimpleCell SimpleCell "
+      >
+        TestName2
+      </p>
+      <p
+        class="Sub Sub"
+      >
+        TestLastname1
+      </p>
+    </li>
+    <li
+      class="Cell "
+      style="transform: translateX(0%);"
+    >
+      <p
+        class="SimpleCell SimpleCell "
+      >
+        TestName3
+      </p>
+      <p
+        class="Sub Sub"
+      >
+        TestLastname1
+      </p>
+    </li>
+  </ul>
+  <div
+    class="Pagination Pagination"
+  >
+    <button
+      class="Button "
+      style="background-color: rgb(0, 72, 186);"
+      type="button"
+    >
+      1
+    </button>
+  </div>
+</div>
+`;

@@ -135,7 +135,7 @@ List.defaultProps = {
   idProperty: 'id',
   mainProperty: '',
   subProperty: '',
-  pagination: false,
+  pagination: 5,
   indexOn: false,
   array: [],
   onClickLabel: null,

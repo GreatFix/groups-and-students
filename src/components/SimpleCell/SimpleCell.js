@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const SimpleCell = (props) => {
   return (
     <p
-      className={`${classes.SimpleCell} ${props.className} ${props.onClick && classes.Hover}`}
+      className={`${classes.SimpleCell} ${props.className} ${props.onClick ? classes.Hover : ''}`}
       onClick={props.onClick}
     >
       {props.children}

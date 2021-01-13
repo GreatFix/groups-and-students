@@ -27,7 +27,7 @@ const Input = (props) => {
         autoFocus={props.autoFocus}
         className={props.validateError && classes.ValidateErrorBorder}
       />
-      <p className={classes.ValidateErrorMessage}>{props.validateError}</p>
+      {props.validateError && <p className={classes.ValidateErrorMessage}>{props.validateError}</p>}
     </div>
   )
 }
@@ -52,7 +52,7 @@ Input.defaultProps = {
   className: '',
   label: null,
   name: null,
-  value: null,
+  value: undefined,
   type: 'text',
   placeholder: null,
   validateError: null,

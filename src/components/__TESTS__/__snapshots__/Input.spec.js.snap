@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input render with all the props in addition to validateError 1`] = `
+<input
+  disabled=""
+  id="TEST_ID"
+  name="TEST_NAME"
+  placeholder="TEST_PLACEHOLDER"
+  required=""
+  spellcheck="false"
+  type="button"
+  value="TEST_VALUE"
+/>
+`;

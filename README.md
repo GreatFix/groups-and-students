@@ -27,11 +27,12 @@ run `npm install`(or `yarn`)
 > - Nodejs
 > - Express
 > - PostgreSQL
->   - Sequelize
+
+<!-- >   - Sequelize -->
 
 ## Screencast
 
-> waiting...
+![screencast](./src/images/screencast.gif)
 
 ## Links
 

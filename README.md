@@ -8,6 +8,10 @@
 
 run `npm install`(or `yarn`)
 
+## Test
+
+run `npm test`(or `yarn`)
+
 ## Stack
 
 > Frontend
@@ -21,14 +25,13 @@ run `npm install`(or `yarn`)
 >   - useTransitions
 > - prop-types
 > - react-router-dom
+> - jest + react-testing-library
 >
 > Backend
 >
 > - Nodejs
 > - Express
 > - PostgreSQL
-
-<!-- >   - Sequelize -->
 
 ## Screencast
 

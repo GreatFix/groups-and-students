@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form render properly 1`] = `
+<div>
+  <form
+    class="Form"
+  >
+    <input
+      value="TEST_TEXT"
+    />
+    <div
+      class="Submit"
+    >
+      <button
+        class="Button "
+        style="background-color: rgb(64, 200, 30);"
+        type="submit"
+      >
+        TEST_BUTTON_TEXT
+      </button>
+    </div>
+  </form>
+</div>
+`;

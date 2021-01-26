@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cell renders with children and id render properly 1`] = `
+<li
+  class="Cell "
+>
+  <p
+    class="SimpleCell SimpleCell "
+  >
+    TEST_TEXT
+  </p>
+</li>
+`;
+
+exports[`Cell renders with index render properly 1`] = `
+<li
+  class="Cell "
+>
+  <p
+    class="Sub Index"
+  >
+    5
+  </p>
+  <p
+    class="SimpleCell SimpleCell "
+  >
+    TEST_TEXT
+  </p>
+</li>
+`;
+
+exports[`Cell renders with subContent render properly 1`] = `
+<li
+  class="Cell "
+>
+  <p
+    class="SimpleCell SimpleCell "
+  >
+    TEST_TEXT
+  </p>
+  <p
+    class="Sub Sub"
+  >
+    TEST_SUBTEXT
+  </p>
+</li>
+`;

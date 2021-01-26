@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header render properly 1`] = `
+<div>
+  <div
+    class="Header "
+  >
+    May the force be with you
+  </div>
+</div>
+`;

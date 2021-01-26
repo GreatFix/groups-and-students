@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button render properly 1`] = `
+<button
+  class="Button TEST_CLASS"
+  disabled=""
+  style="background-color: rgb(64, 200, 30);"
+  type="reset"
+>
+  TEST_TEXT
+</button>
+`;
